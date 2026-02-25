@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: breach-monitor
+spec:
+  schedule: "*/10 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: monitor
+              image: breach-monitor:1.0
+              imagePullPolicy: Never
+              env:
+                - name: KEYWORD
+                  value: "laposte.fr"
+          restartPolicy: OnFailure
