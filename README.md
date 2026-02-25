@@ -12,7 +12,7 @@ minikube image load breach-monitor:1.0
 
 # Déployer le Pod
 
-kubectl apply -f k8s/pod.yaml
+kubectl apply -f pod.yaml
 
 # Consulter les logs
 
