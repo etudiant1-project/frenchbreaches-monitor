@@ -2,6 +2,8 @@
 
 Conteneur de monitoring simple qui vérifie un frenchbreaches.com pour un nom de domaine donné et retourne un code de sortie.
 
+nb : Dans les différents fichiers, remplacer "example.com" par 
+
 # Construction de l’image
 
 docker build -t breach-monitor:1.0 .
